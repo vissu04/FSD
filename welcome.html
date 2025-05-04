@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome</title>
+</head>
+<script>
+    function LogoutValidate(){
+        localStorage.clear();
+    }
+    function getdetails(){
+        var getfirstname=localStorage.getItem("firstname");
+        var getemail=localStorage.getItem("email");
+        document.getElementById("data").innerHTML="welcome to "+getfirstname+" <br>"+getemail;
+
+    }
+</script>
+<body onload="getdetails()">
+    <h1 id="data">Welcome to CMRIT</h1>
+    <form action="/" method="post">
+        <button type="submit" onclick="LogoutValidate()">LOGOUT</button>
+
+    </form>
+    
+</body>
+</html>
